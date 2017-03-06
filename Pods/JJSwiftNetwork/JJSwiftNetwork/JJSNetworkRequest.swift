@@ -14,22 +14,22 @@ import JJSwiftTool
 import Alamofire
 import CryptoSwift
 
-open class JJSNetworkRequest: JJSBaseNetworkRequest {
+open class JJSNetworkRequest: JJSNetworkBaseRequest {
     
-    var isSaveToMemory: Bool = false
-    var isSaveToDisk: Bool = false
+    public var isSaveToMemory: Bool = false
+    public var isSaveToDisk: Bool = false
     
-    var identity: String?
-    var userCacheDirectory: String?
-    var sensitiveDataForSavedFileName: String?
-    var parametersForSavedFileName: [String: Any]?
-    var otherInfo = [String: Any]()
+    public var identity: String?
+    public var userCacheDirectory: String?
+    public var sensitiveDataForSavedFileName: String?
+    public var parametersForSavedFileName: [String: Any]?
+    public var otherInfo = [String: Any]()
     
-    var responseCallback: ((JJSResult<JJSNetworkBaseObjectProtocol>, [String: Any]) -> Void)?
+    public var responseCallback: ((JJSResult<JJSNetworkBaseObjectProtocol>, [String: Any]) -> Void)?
     
-    var operation: ((JJSNetworkBaseObjectProtocol?, JJSNetworkBaseObjectProtocol?) -> JJSNetworkBaseObjectProtocol?)?
+    public var operation: ((JJSNetworkBaseObjectProtocol?, JJSNetworkBaseObjectProtocol?) -> JJSNetworkBaseObjectProtocol?)?
     
-    var jsonConvert: JJSNetworkJsonConvertProtocol?
+    public var jsonConvert: JJSNetworkJsonConvertProtocol?
     
     private var oldCacheObject: JJSNetworkBaseObjectProtocol?
     private var newCacheObject: JJSNetworkBaseObjectProtocol?
@@ -90,16 +90,50 @@ open class JJSNetworkRequest: JJSBaseNetworkRequest {
     // MARK: -
     // MARK: response operation
     
-    open func filterResponseString() -> String? {
-        return responseString
-    }
-    
-    open func getConvertObjectContent(_ resoponseDic: [String : Any]) -> Any {
+    open func getConvertObjectContent(_ resoponseDic: Any) -> Any {
         return resoponseDic;
     }
     
     open func convertToObject(_ resoponseString: String?) -> JJSNetworkBaseObjectProtocol? {
-        return self.jsonConvert?.convertToObject(jsonString: resoponseString)
+        let jsonObject = actionBeforeConvertToObject(resoponseString)
+        if nil == jsonObject {
+            return nil
+        }
+        
+        let convertObject = self.jsonConvert?.convertToObject(jsonObject: jsonObject!)
+        if nil == convertObject {
+            return nil
+        }
+        
+        let object = actionAfterConvertToObject(convertObject!, resoponseString: resoponseString!)
+        return object
+    }
+    
+    open func actionBeforeConvertToObject(_ resoponseString: String?) -> Any? {
+        guard resoponseString != nil else {
+            return nil
+        }
+        
+        let json = JSON(parseJSON: resoponseString!)
+        let resoponseDic = json.dictionaryObject
+        if nil == resoponseDic {
+            return nil
+        }
+        
+        let jsonObject = getConvertObjectContent(resoponseDic!)
+        return jsonObject
+    }
+    
+    open func actionAfterConvertToObject(_ object: JJSNetworkBaseObjectProtocol, resoponseString: String) -> JJSNetworkBaseObjectProtocol {
+        let json = JSON(parseJSON: resoponseString)
+        let resoponseDic = json.dictionaryObject
+        if nil == resoponseDic {
+            return object
+        }
+        
+        object.setData(resoponseDic!)
+        
+        return object
     }
     
     open func responseOperation(newObject: JJSNetworkBaseObjectProtocol?, oldObject: JJSNetworkBaseObjectProtocol?) -> JJSNetworkBaseObjectProtocol? {

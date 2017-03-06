@@ -1,5 +1,5 @@
 //
-//  JJSBaseNetworkRequest.swift
+//  JJSNetworkBaseRequest.swift
 //  JJSwiftNetwork
 //
 //  Created by JJ on 2/17/17.
@@ -10,26 +10,26 @@ import UIKit
 
 import Alamofire
 
-open class JJSBaseNetworkRequest {
+open class JJSNetworkBaseRequest {
     
-    var successCompletionBlock: ((JJSBaseNetworkRequest) -> Void)?
-    var failureCompletionBlock: ((JJSBaseNetworkRequest) -> Void)?
+    public var successCompletionBlock: ((JJSNetworkBaseRequest) -> Void)?
+    public var failureCompletionBlock: ((JJSNetworkBaseRequest) -> Void)?
     
-    var httpRequest: Request?
-    var httpParameters: [String: Any]?
-    var httpMethod: HTTPMethod = .get
+    public var httpRequest: Request?
+    public var httpParameters: [String: Any]?
+    public var httpMethod: HTTPMethod = .get
     
-    var response: HTTPURLResponse?
-    var responseString: String?
-    var responseError: Error?
-    var responseStatusCode: Int? {
+    public var response: HTTPURLResponse?
+    public var responseString: String?
+    public var responseError: Error?
+    public var responseStatusCode: Int? {
         if let response = response {
             return response.statusCode
         } else {
             return nil
         }
     }
-    var responseHeaders: [String: String]? {
+    public var responseHeaders: [String: String]? {
         if let response = response {
             var headers = [String: String]()
             for (field, value) in response.allHeaderFields {
@@ -78,7 +78,7 @@ open class JJSBaseNetworkRequest {
         self.httpRequest = request
     }
     
-    func start(successCompletionBlock: ((JJSBaseNetworkRequest) -> Void)?, failureCompletionBlock: ((JJSBaseNetworkRequest) -> Void)?) {
+    func start(successCompletionBlock: ((JJSNetworkBaseRequest) -> Void)?, failureCompletionBlock: ((JJSNetworkBaseRequest) -> Void)?) {
         self.successCompletionBlock = successCompletionBlock
         self.failureCompletionBlock = failureCompletionBlock
         
@@ -100,6 +100,10 @@ open class JJSBaseNetworkRequest {
     open func buildRequestURL() -> String {
         let urlString = requestHostURL() + requestPathURL()
         return urlString
+    }
+    
+    open func filterResponseString() -> String? {
+        return responseString
     }
     
     func handleRequestResult(_ response: HTTPURLResponse?, _ result: Result<String>) {
