@@ -10,6 +10,10 @@
 		286C42B11E6CF8CB00C8C656 /* JJSwiftService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286C42A71E6CF8CB00C8C656 /* JJSwiftService.framework */; };
 		286C42B61E6CF8CB00C8C656 /* JJSwiftServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286C42B51E6CF8CB00C8C656 /* JJSwiftServiceTests.swift */; };
 		286C42B81E6CF8CB00C8C656 /* JJSwiftService.h in Headers */ = {isa = PBXBuildFile; fileRef = 286C42AA1E6CF8CB00C8C656 /* JJSwiftService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		286C42C21E6CFA8E00C8C656 /* JJSService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286C42C11E6CFA8E00C8C656 /* JJSService.swift */; };
+		286C42C61E6CFBF200C8C656 /* JJSWeatherModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286C42C31E6CFBF200C8C656 /* JJSWeatherModel.swift */; };
+		286C42C71E6CFBF200C8C656 /* JJSWeatherNetwork.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286C42C41E6CFBF200C8C656 /* JJSWeatherNetwork.swift */; };
+		286C42C81E6CFBF200C8C656 /* JJSWeatherService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286C42C51E6CFBF200C8C656 /* JJSWeatherService.swift */; };
 		28FE6D8BCF0539DCBCEE75D7 /* Pods_JJSwiftService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F2AF61A01BD7BE54A99B3D /* Pods_JJSwiftService.framework */; };
 		6F8EA94C22128055085D065E /* Pods_JJSwiftServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0D83708807800A105DC2DB /* Pods_JJSwiftServiceTests.framework */; };
 /* End PBXBuildFile section */
@@ -32,6 +36,10 @@
 		286C42B01E6CF8CB00C8C656 /* JJSwiftServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JJSwiftServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		286C42B51E6CF8CB00C8C656 /* JJSwiftServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJSwiftServiceTests.swift; sourceTree = "<group>"; };
 		286C42B71E6CF8CB00C8C656 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		286C42C11E6CFA8E00C8C656 /* JJSService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJSService.swift; sourceTree = "<group>"; };
+		286C42C31E6CFBF200C8C656 /* JJSWeatherModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJSWeatherModel.swift; sourceTree = "<group>"; };
+		286C42C41E6CFBF200C8C656 /* JJSWeatherNetwork.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJSWeatherNetwork.swift; sourceTree = "<group>"; };
+		286C42C51E6CFBF200C8C656 /* JJSWeatherService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JJSWeatherService.swift; sourceTree = "<group>"; };
 		7B6F67CEB5C3CF32E88D40D2 /* Pods-JJSwiftServiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJSwiftServiceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JJSwiftServiceTests/Pods-JJSwiftServiceTests.release.xcconfig"; sourceTree = "<group>"; };
 		A2B976B5646FF7DFADDEEC1E /* Pods-JJSwiftService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJSwiftService.release.xcconfig"; path = "Pods/Target Support Files/Pods-JJSwiftService/Pods-JJSwiftService.release.xcconfig"; sourceTree = "<group>"; };
 		BBDA1BF4DF4BB113E8903B4E /* Pods-JJSwiftServiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJSwiftServiceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JJSwiftServiceTests/Pods-JJSwiftServiceTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -94,6 +102,7 @@
 		286C42A91E6CF8CB00C8C656 /* JJSwiftService */ = {
 			isa = PBXGroup;
 			children = (
+				286C42C11E6CFA8E00C8C656 /* JJSService.swift */,
 				286C42AA1E6CF8CB00C8C656 /* JJSwiftService.h */,
 				286C42AB1E6CF8CB00C8C656 /* Info.plist */,
 			);
@@ -103,6 +112,9 @@
 		286C42B41E6CF8CB00C8C656 /* JJSwiftServiceTests */ = {
 			isa = PBXGroup;
 			children = (
+				286C42C31E6CFBF200C8C656 /* JJSWeatherModel.swift */,
+				286C42C41E6CFBF200C8C656 /* JJSWeatherNetwork.swift */,
+				286C42C51E6CFBF200C8C656 /* JJSWeatherService.swift */,
 				286C42B51E6CF8CB00C8C656 /* JJSwiftServiceTests.swift */,
 				286C42B71E6CF8CB00C8C656 /* Info.plist */,
 			);
@@ -185,6 +197,7 @@
 				TargetAttributes = {
 					286C42A61E6CF8CB00C8C656 = {
 						CreatedOnToolsVersion = 8.2.1;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
 					286C42AF1E6CF8CB00C8C656 = {
@@ -311,6 +324,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				286C42C21E6CFA8E00C8C656 /* JJSService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +332,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				286C42C61E6CFBF200C8C656 /* JJSWeatherModel.swift in Sources */,
+				286C42C71E6CFBF200C8C656 /* JJSWeatherNetwork.swift in Sources */,
+				286C42C81E6CFBF200C8C656 /* JJSWeatherService.swift in Sources */,
 				286C42B61E6CF8CB00C8C656 /* JJSwiftServiceTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +453,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 1F3143536ED9F5D67A87347D /* Pods-JJSwiftService.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -447,6 +465,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jianjing.JJSwiftService;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -455,6 +474,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A2B976B5646FF7DFADDEEC1E /* Pods-JJSwiftService.release.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -474,6 +494,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = BBDA1BF4DF4BB113E8903B4E /* Pods-JJSwiftServiceTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = JJSwiftServiceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jianjing.JJSwiftServiceTests;
@@ -486,6 +507,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7B6F67CEB5C3CF32E88D40D2 /* Pods-JJSwiftServiceTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = JJSwiftServiceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jianjing.JJSwiftServiceTests;
@@ -513,6 +535,7 @@
 				286C42BD1E6CF8CB00C8C656 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		286C42BE1E6CF8CB00C8C656 /* Build configuration list for PBXNativeTarget "JJSwiftServiceTests" */ = {
 			isa = XCConfigurationList;
@@ -521,6 +544,7 @@
 				286C42C01E6CF8CB00C8C656 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -8,6 +8,8 @@
 
 import UIKit
 
+import JJSwiftNetwork
+
 open class JJSService: NSObject {
     
     open func startRequest(request: JJSNetworkRequest, successAction: ((JJSNetworkBaseObjectProtocol, JJSNetworkRequest) -> Void)? = nil, failAcction: ((Error, JJSNetworkRequest) -> Void)? = nil) {
