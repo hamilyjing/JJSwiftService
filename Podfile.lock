@@ -1,0 +1,27 @@
+PODS:
+  - Alamofire (4.3.0)
+  - CryptoSwift (0.6.7)
+  - HandyJSON (1.5.2)
+  - JJSwiftNetwork (1.0.1):
+    - Alamofire (~> 4.3.0)
+    - CryptoSwift (~> 0.6.7)
+    - HandyJSON (~> 1.5.2)
+    - JJSwiftTool
+    - SwiftyJSON (~> 3.1.4)
+  - JJSwiftTool (1.0.4)
+  - SwiftyJSON (3.1.4)
+
+DEPENDENCIES:
+  - JJSwiftNetwork
+
+SPEC CHECKSUMS:
+  Alamofire: 856a113053a7bc9cbe5d6367a555d773fc5cfef7
+  CryptoSwift: 685ae257941e5447474348a2b545583e1a16b573
+  HandyJSON: bb5597b375370dbe4312a27e696341b1f65e4fd7
+  JJSwiftNetwork: 452f20c5d6bebbf08193a9fd2712273c959fa6c1
+  JJSwiftTool: 9499a4d5d9b384d353b12852ab1cbe9a2748f3bb
+  SwiftyJSON: c2842d878f95482ffceec5709abc3d05680c0220
+
+PODFILE CHECKSUM: 052038e4b42a3cbd6da6254297b4b9a1a17b5f10
+
+COCOAPODS: 1.2.0.beta.1

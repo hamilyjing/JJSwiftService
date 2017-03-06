@@ -1,0 +1,6 @@
+framework module JJSwiftNetwork {
+  umbrella header "JJSwiftNetwork-umbrella.h"
+
+  export *
+  module * { export * }
+}

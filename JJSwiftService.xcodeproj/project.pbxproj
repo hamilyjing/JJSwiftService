@@ -10,6 +10,8 @@
 		286C42B11E6CF8CB00C8C656 /* JJSwiftService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 286C42A71E6CF8CB00C8C656 /* JJSwiftService.framework */; };
 		286C42B61E6CF8CB00C8C656 /* JJSwiftServiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 286C42B51E6CF8CB00C8C656 /* JJSwiftServiceTests.swift */; };
 		286C42B81E6CF8CB00C8C656 /* JJSwiftService.h in Headers */ = {isa = PBXBuildFile; fileRef = 286C42AA1E6CF8CB00C8C656 /* JJSwiftService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		28FE6D8BCF0539DCBCEE75D7 /* Pods_JJSwiftService.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E0F2AF61A01BD7BE54A99B3D /* Pods_JJSwiftService.framework */; };
+		6F8EA94C22128055085D065E /* Pods_JJSwiftServiceTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0D83708807800A105DC2DB /* Pods_JJSwiftServiceTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -23,12 +25,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1F3143536ED9F5D67A87347D /* Pods-JJSwiftService.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJSwiftService.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JJSwiftService/Pods-JJSwiftService.debug.xcconfig"; sourceTree = "<group>"; };
 		286C42A71E6CF8CB00C8C656 /* JJSwiftService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JJSwiftService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		286C42AA1E6CF8CB00C8C656 /* JJSwiftService.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JJSwiftService.h; sourceTree = "<group>"; };
 		286C42AB1E6CF8CB00C8C656 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		286C42B01E6CF8CB00C8C656 /* JJSwiftServiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = JJSwiftServiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		286C42B51E6CF8CB00C8C656 /* JJSwiftServiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JJSwiftServiceTests.swift; sourceTree = "<group>"; };
 		286C42B71E6CF8CB00C8C656 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7B6F67CEB5C3CF32E88D40D2 /* Pods-JJSwiftServiceTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJSwiftServiceTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-JJSwiftServiceTests/Pods-JJSwiftServiceTests.release.xcconfig"; sourceTree = "<group>"; };
+		A2B976B5646FF7DFADDEEC1E /* Pods-JJSwiftService.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJSwiftService.release.xcconfig"; path = "Pods/Target Support Files/Pods-JJSwiftService/Pods-JJSwiftService.release.xcconfig"; sourceTree = "<group>"; };
+		BBDA1BF4DF4BB113E8903B4E /* Pods-JJSwiftServiceTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JJSwiftServiceTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JJSwiftServiceTests/Pods-JJSwiftServiceTests.debug.xcconfig"; sourceTree = "<group>"; };
+		DB0D83708807800A105DC2DB /* Pods_JJSwiftServiceTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JJSwiftServiceTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E0F2AF61A01BD7BE54A99B3D /* Pods_JJSwiftService.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JJSwiftService.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -36,6 +44,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				28FE6D8BCF0539DCBCEE75D7 /* Pods_JJSwiftService.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -44,18 +53,32 @@
 			buildActionMask = 2147483647;
 			files = (
 				286C42B11E6CF8CB00C8C656 /* JJSwiftService.framework in Frameworks */,
+				6F8EA94C22128055085D065E /* Pods_JJSwiftServiceTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		23260939EC7F05D3483CBAE4 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1F3143536ED9F5D67A87347D /* Pods-JJSwiftService.debug.xcconfig */,
+				A2B976B5646FF7DFADDEEC1E /* Pods-JJSwiftService.release.xcconfig */,
+				BBDA1BF4DF4BB113E8903B4E /* Pods-JJSwiftServiceTests.debug.xcconfig */,
+				7B6F67CEB5C3CF32E88D40D2 /* Pods-JJSwiftServiceTests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		286C429D1E6CF8CB00C8C656 = {
 			isa = PBXGroup;
 			children = (
 				286C42A91E6CF8CB00C8C656 /* JJSwiftService */,
 				286C42B41E6CF8CB00C8C656 /* JJSwiftServiceTests */,
 				286C42A81E6CF8CB00C8C656 /* Products */,
+				23260939EC7F05D3483CBAE4 /* Pods */,
+				9F3DCB8CB06BA620817C5910 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +109,15 @@
 			path = JJSwiftServiceTests;
 			sourceTree = "<group>";
 		};
+		9F3DCB8CB06BA620817C5910 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E0F2AF61A01BD7BE54A99B3D /* Pods_JJSwiftService.framework */,
+				DB0D83708807800A105DC2DB /* Pods_JJSwiftServiceTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -104,10 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 286C42BB1E6CF8CB00C8C656 /* Build configuration list for PBXNativeTarget "JJSwiftService" */;
 			buildPhases = (
+				F26317F419E9CF0264202548 /* [CP] Check Pods Manifest.lock */,
 				286C42A21E6CF8CB00C8C656 /* Sources */,
 				286C42A31E6CF8CB00C8C656 /* Frameworks */,
 				286C42A41E6CF8CB00C8C656 /* Headers */,
 				286C42A51E6CF8CB00C8C656 /* Resources */,
+				F94E8F21667116E21545B878 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -122,9 +156,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 286C42BE1E6CF8CB00C8C656 /* Build configuration list for PBXNativeTarget "JJSwiftServiceTests" */;
 			buildPhases = (
+				913887443420E1A77CAC7E79 /* [CP] Check Pods Manifest.lock */,
 				286C42AC1E6CF8CB00C8C656 /* Sources */,
 				286C42AD1E6CF8CB00C8C656 /* Frameworks */,
 				286C42AE1E6CF8CB00C8C656 /* Resources */,
+				825C23BE1D456CBE226AD06C /* [CP] Embed Pods Frameworks */,
+				E599C0EA220F9D664CB10023 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -190,6 +227,84 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		825C23BE1D456CBE226AD06C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JJSwiftServiceTests/Pods-JJSwiftServiceTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		913887443420E1A77CAC7E79 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		E599C0EA220F9D664CB10023 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JJSwiftServiceTests/Pods-JJSwiftServiceTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F26317F419E9CF0264202548 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F94E8F21667116E21545B878 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-JJSwiftService/Pods-JJSwiftService-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		286C42A21E6CF8CB00C8C656 /* Sources */ = {
@@ -319,6 +434,7 @@
 		};
 		286C42BC1E6CF8CB00C8C656 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1F3143536ED9F5D67A87347D /* Pods-JJSwiftService.debug.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -337,6 +453,7 @@
 		};
 		286C42BD1E6CF8CB00C8C656 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A2B976B5646FF7DFADDEEC1E /* Pods-JJSwiftService.release.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
@@ -355,6 +472,7 @@
 		};
 		286C42BF1E6CF8CB00C8C656 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BBDA1BF4DF4BB113E8903B4E /* Pods-JJSwiftServiceTests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = JJSwiftServiceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -366,6 +484,7 @@
 		};
 		286C42C01E6CF8CB00C8C656 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B6F67CEB5C3CF32E88D40D2 /* Pods-JJSwiftServiceTests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = JJSwiftServiceTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
