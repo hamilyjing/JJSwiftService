@@ -1,7 +1,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "JJSwiftService"
-  s.version      = "1.0.0"
+  s.version      = "1.0.1"
   s.summary      = "iOS swift service framework"
   s.homepage     = "https://github.com/hamilyjing/JJSwiftService"
   s.license      = "MIT"
